@@ -11,12 +11,16 @@
   "dependencies": {
     "@react-three/drei": "^9.57.3",
     "@react-three/fiber": "^8.12.0",
+    "@zappar/zappar": "^2.1.0",
+    "@zappar/zappar-cv": "^2.0.0",
     "@zappar/zappar-react-three-fiber": "^2.2.0",
+    "@zappar/zappar-threejs": "^2.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "three": "^0.146.0"
   },
   "devDependencies": {
+    "@chialab/esbuild-plugin-worker": "^0.17.3",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@types/three": "^0.149.0",

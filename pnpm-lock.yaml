@@ -1,13 +1,17 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@chialab/esbuild-plugin-worker': ^0.17.3
   '@react-three/drei': ^9.57.3
   '@react-three/fiber': ^8.12.0
   '@types/react': ^18.0.27
   '@types/react-dom': ^18.0.10
   '@types/three': ^0.149.0
   '@vitejs/plugin-react': ^3.1.0
+  '@zappar/zappar': ^2.1.0
+  '@zappar/zappar-cv': ^2.0.0
   '@zappar/zappar-react-three-fiber': ^2.2.0
+  '@zappar/zappar-threejs': ^2.1.0
   react: ^18.2.0
   react-dom: ^18.2.0
   three: ^0.146.0
@@ -18,12 +22,16 @@ specifiers:
 dependencies:
   '@react-three/drei': 9.57.3_eqhryam5hg4qtrjutzi6anlkmy
   '@react-three/fiber': 8.12.0_mjlgqb43i6mvslmnwgzrdumoh4
+  '@zappar/zappar': 2.1.0
+  '@zappar/zappar-cv': 2.0.0
   '@zappar/zappar-react-three-fiber': 2.2.0_kdpnijhv56qxvet526i5qif4fi
+  '@zappar/zappar-threejs': 2.1.0_three@0.146.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   three: 0.146.0
 
 devDependencies:
+  '@chialab/esbuild-plugin-worker': 0.17.3
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
   '@types/three': 0.149.0
@@ -291,6 +299,45 @@ packages:
   /@chevrotain/utils/10.5.0:
     resolution: {integrity: sha512-hBzuU5+JjB2cqNZyszkDHZgOSrUUT8V3dhgRl8Q9Gp6dAj/H5+KILGjbhDpc3Iy9qmqlm/akuOI2ut9VUtzJxQ==}
     dev: false
+
+  /@chialab/esbuild-plugin-meta-url/0.17.2:
+    resolution: {integrity: sha512-BGlitlhRUzKzyhozpyvAvE00FmpRXKe9gPs2uFPc9T6PmAunIPCYg4fTk/hqK/GZa75N+XH/+L+mkOhZkx/TDA==}
+    engines: {node: '>=13'}
+    dependencies:
+      '@chialab/esbuild-rna': 0.17.4
+      '@chialab/estransform': 0.17.3
+      '@chialab/node-resolve': 0.17.0
+    dev: true
+
+  /@chialab/esbuild-plugin-worker/0.17.3:
+    resolution: {integrity: sha512-psGK7YUNBFM1athraEdCQPgha7bNW4+NU+B7+oNcWHasXZ20jxFJ/xN44aaKiGbGNYDcmlXxT/bBwu8QeQJnVA==}
+    engines: {node: '>=13'}
+    dependencies:
+      '@chialab/esbuild-plugin-meta-url': 0.17.2
+      '@chialab/esbuild-rna': 0.17.4
+      '@chialab/estransform': 0.17.3
+      '@chialab/node-resolve': 0.17.0
+    dev: true
+
+  /@chialab/esbuild-rna/0.17.4:
+    resolution: {integrity: sha512-TmK8k3+mnhxYDF4XbTOCXHGLkK8Cs4IgOAv7GfU8sU2HCK8JBox9GkkK/+bkrU1e0Xc8npR9Di0S+CoZPU0Stg==}
+    engines: {node: '>=13'}
+    dependencies:
+      '@chialab/estransform': 0.17.3
+      '@chialab/node-resolve': 0.17.0
+    dev: true
+
+  /@chialab/estransform/0.17.3:
+    resolution: {integrity: sha512-ZFCcDk85ZllhUiAMIzRFsLhrA2z8xwRyXyJBNMP/84+3czLEydSTzzBK9nXNGloOspwp+lL+EgPlFY8Ry693Bg==}
+    engines: {node: '>=13'}
+    dependencies:
+      '@parcel/source-map': 2.1.1
+    dev: true
+
+  /@chialab/node-resolve/0.17.0:
+    resolution: {integrity: sha512-u9VwO/0djjXsM70aH/Wrx0BrXjtjhfNOxaDks32xa1mZP9T0CXZ0be5Sv3hXI9g5UeJbfvCyFJS2hfJEu7Ifgg==}
+    engines: {node: '>=13'}
+    dev: true
 
   /@esbuild/android-arm/0.16.17:
     resolution: {integrity: sha512-N9x1CMXVhtWEAMS7pNNONyA14f71VPQN9Cnavj1XQh6T7bskqiLLrSca4O0Vr8Wdcga943eThxnVp3JLnBMYtw==}
@@ -646,6 +693,13 @@ packages:
     resolution: {integrity: sha512-LUewfj94xCMH2rbD5YJ+6AQ4AVjFYTgpp6rboWM5T7N3IsIF65SBEOVcYMGAEzO/kKNiNaW4LoWtoThOhH06gw==}
     dependencies:
       '@octokit/openapi-types': 16.0.0
+    dev: true
+
+  /@parcel/source-map/2.1.1:
+    resolution: {integrity: sha512-Ejx1P/mj+kMjQb8/y5XxDUn4reGdr+WyKYloBljpppUy8gs42T+BNoEOuRYqDVdgPc6NxduzIDoJS9pOFfV5Ew==}
+    engines: {node: ^12.18.3 || >=14}
+    dependencies:
+      detect-libc: 1.0.3
     dev: true
 
   /@react-spring/animated/9.6.1_react@18.2.0:
@@ -1024,6 +1078,12 @@ packages:
     dependencies:
       webgl-constants: 1.1.1
     dev: false
+
+  /detect-libc/1.0.3:
+    resolution: {integrity: sha512-pGjwhsmsp4kL2RTz08wcOlGN83otlqHeD/Z5T8GXZB+/YcpQ/dgo+lbU8ZsGxV0HIvqqxo9l7mqYwyYMD9bKDg==}
+    engines: {node: '>=0.10'}
+    hasBin: true
+    dev: true
 
   /draco3d/1.5.6:
     resolution: {integrity: sha512-+3NaRjWktb5r61ZFoDejlykPEFKT5N/LkbXsaddlw6xNSXBanUYpFc2AXXpbJDilPHazcSreU/DpQIaxfX0NfQ==}
